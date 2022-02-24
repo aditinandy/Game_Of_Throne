@@ -79,7 +79,11 @@ exports.getSearch = (req, res, next) => {
         if(err){  
         console.log(err);  
         }else{  
-        res.render('home.ejs',{data:data});
+            res.render('home.ejs', {
+                data: data,
+                pageTitle: "user Profile",
+                path: '/'
+            });
         }  
         })  
         } catch (error) {  
